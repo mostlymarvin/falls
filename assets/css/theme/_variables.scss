@@ -1,0 +1,32 @@
+
+//breakpoints
+$tiny: 360px;
+$xsmall: 480px;
+$small: 600px;
+$mobile: 876px;
+$tablet: 1024px;
+$laptop: 1340px;
+$large: 1440px;
+
+
+@mixin allcaps {
+  font-family: var( --wp--preset--font-family--montserrat );
+  color: var( --wp--preset--color--text-light );
+  letter-spacing: .76px;
+  font-weight: 500;
+  justify-content: center;
+  list-style:none;
+  text-transform:uppercase;
+}
+
+@mixin pop-underline {
+  background-color: var( --wp--preset--color--primary );
+  content: '';
+  display:block;
+  height:3px;
+  width:0;
+  position:absolute;
+  top: calc( 100% + 6px );
+  left:50%;
+  transition: all .25s;
+}

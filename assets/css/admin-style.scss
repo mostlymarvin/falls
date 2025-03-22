@@ -1,0 +1,53 @@
+@use 'theme/reset';
+@use "theme/base";
+@use "theme/layout";
+@use 'theme/alignment';
+
+@use 'theme/icons';
+@use 'theme/media';
+@use "theme/header";
+
+@use "theme/slick";
+@use "theme/slick-theme";
+
+
+@use "theme/breadcrumbs";
+
+.slick-carousel {
+  display: flex !important;
+  align-items: center;
+  max-width: 100%;
+  overflow: hidden;
+  justify-content: space-between;
+
+  & > * {
+    flex: 1;
+    max-width: 12.5%;
+  }
+}
+
+/* Editor */
+:where(.editor-styles-wrapper) {
+
+  .slick-slides {
+    .slick-slide {
+      display: none !important;
+
+      &:first-of-type {
+        display: block !important;
+      }
+    }
+
+    &.has-child-selected {
+      .slick-slide {
+        &:first-of-type:not(.is-selected) {
+          display: none !important;
+        }
+
+        &.is-selected {
+          display: block !important;
+        }
+      }
+    }
+  }
+}

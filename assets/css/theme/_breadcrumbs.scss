@@ -1,0 +1,16 @@
+@use "theme/variables" as var;
+
+.yoast-breadcrumbs {
+  @include var.allcaps;
+  font-size: var( --wp--preset--font-size--xx-small );
+
+  a {
+    text-decoration:none !important;
+    display:inline-block;
+    padding: 1rem .5rem;
+
+    &:after {
+      @include var.pop-underline;
+    }
+  }
+}
